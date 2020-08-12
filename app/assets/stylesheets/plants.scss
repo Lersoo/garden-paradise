@@ -1,0 +1,16 @@
+// Place all the styles related to the Plants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.plants-container {
+  display: flex;
+  .plant-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: 300px;
+    img {
+      max-height: 200px;
+    }
+  }
+}

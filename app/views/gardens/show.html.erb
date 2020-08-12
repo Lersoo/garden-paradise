@@ -1,0 +1,18 @@
+<div style="background-image: url(<%= @garden.image_url %>); height: 40vh;">
+<h1 style="background: black; color: white;"><%= @garden.name %></h1>
+</div>
+
+<p>Description: <%= @garden.description %></p>
+<p>Surface: <%= @garden.surface %>m²</p>
+
+<h2> My plants </h2>
+<div class='plants-container'>
+  <% @garden.plants.each do |plant| %>
+    <div class='plant-card'>
+    <img src= <%= plant.image_url %> />
+      <%= plant.name %>
+    <%= link_to 'Destroy this plant', plant_path(plant), method: :delete, data: { confirm: "Are you sure ?" } %>
+    </div>
+  <% end %>
+</div>
+<%= link_to 'Add a plant', new_garden_plant_path(@garden) %>
