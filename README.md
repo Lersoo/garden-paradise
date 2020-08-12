@@ -1,24 +1,8 @@
-# README
+**Reminder**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The goal of this livecode was to :
+- See a garden (ie list its plants)
+- Add a plant to a garden
+- Delete a plant
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I hope it's all clear for you now ! 
