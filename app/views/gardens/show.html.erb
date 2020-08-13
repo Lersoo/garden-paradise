@@ -9,9 +9,15 @@
 <div class='plants-container'>
   <% @garden.plants.each do |plant| %>
     <div class='plant-card'>
-    <img src= <%= plant.image_url %> />
+      <div class="card-tags">
+        <% plant.tags.each do |tag| %>
+          <%= tag.name %>
+        <% end %>
+        <%= link_to '+', new_plant_plant_tag_path(plant) %>
+      </div>
+      <img src= <%= plant.image_url %> />
       <%= plant.name %>
-    <%= link_to 'Destroy this plant', plant_path(plant), method: :delete, data: { confirm: "Are you sure ?" } %>
+      <%= link_to 'Destroy this plant', plant_path(plant), method: :delete, data: { confirm: "Are you sure ?" } %>
     </div>
   <% end %>
 </div>

@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+PlantTag.destroy_all
+Plant.destroy_all
+Tag.destroy_all
 Garden.destroy_all
 
 garden_1 = {
@@ -36,3 +39,10 @@ plant.garden = Garden.all.sample
 plant.save!
 
 p "Created plant associated with garden : #{plant.garden.name}"
+
+
+names = %w(Fruit-tree Cactus Greasy\ plant Flower Ferns Conifers)
+
+names.each do |name|
+  Tag.create(name: name)
+end
